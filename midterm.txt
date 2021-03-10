@@ -16,6 +16,8 @@ Once these statements are commented out the program outputs:
 20
 .
 
+I am clearly very behind in this class and did not know where to even begin for this question and wasted so much time that I did not complete the Scala program. I am going to rethink my position in this class and will most likely contact the professor regarding that matter.
+
 Statement 1
 Static:
 Dynamic:
