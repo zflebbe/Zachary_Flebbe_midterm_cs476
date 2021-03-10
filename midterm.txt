@@ -1,1 +1,58 @@
-ready for the midterm
+public static void main(String[] args){
+        // Main.MCall call1 = new Main.new Nested();        //statement 1
+        Main call2 = new Main().new Nested();               //statement 2
+        // Main.Nested call3 = (Main.Nested) new Main();    //statement 3
+        // com.mg.MCall call4 = new Main();                 //statement 4
+        // System.out.println(call1.f());                   //statement 5
+        System.out.println(call2.f());                      //statement 6
+        // System.out.println(call3.f());                   //statement 7
+        // System.out.println(call4.f());                   //statement 8
+    }
+
+Does this program have type errors? Explain static and dynamic type (subtype and supertype) assignments for variables with references to the JLS, statement by statement for the lines of code labeled with comments that start with //statement. Which statements, if any, should you comment out to make this program compile and run without producing any errors? With commented out statement(s), what output does the program print? Why? Please explain.
+
+To make this program compile, the statements that must be commented out are: 1, 3, 4, 5, 7, 8.
+Once these statements are commented out the program outputs:
+20
+.
+
+Statement 1
+Static:
+Dynamic:
+
+Statement 2
+Static:
+Dynamic:
+
+Statement 3
+Static:
+Dynamic:
+
+Statement 4
+Static:
+Dynamic:
+
+Statement 5
+Static:
+Dynamic:
+
+Statement 6
+Static:
+Dynamic:
+
+Statement 7
+Static:
+Dynamic:
+
+Statement 8
+Static:
+Dynamic:
+
+In your own words please explain what significant drawbacks
+Prof.Kernighan identified in the design of the programming
+language Pascal. 
+
+Professor Kernighan identifies many drawbacks in the design of Pascal, however I will only explain a few. 
+In Pascal, the size of an array is part of it's type definition. Given two different char arrays: 'Zero' and 'One'; a function to search for the letter 'e' (which is in both arrays) cannot be applied to the two char arrays as they stand since they are of different lengths. The best solution is to declare every string with the max length possible.
+There are no static variables in Pascal, so if a value must be accessed from one function call to another, it must be declared externally. Not only does this create an issue of having a unique identifier, but variables cannot be declared statically. So a program must initialize any 'global' variables at the beginning of it's runtime.
+Control flow is convoluted in Pascal, there are many issues with the execution of logical statements; there is no guaranteed order of the logical operators 'and' and 'or', there are no 'break' statements for exiting loops (coupled with the lack of a 'return' statement) makes Pascal even more difficult, and the 'case' statement has no 'default' clause. Since the 'case' statement does not have a default clause, if the input does not match any of the cases, behavior is undefined, this makes the 'case' statement basically useless.
